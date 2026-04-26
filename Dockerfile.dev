@@ -1,0 +1,15 @@
+# Imagem só para desenvolvimento: dependências completas (inclui devDependencies).
+# O código vem do bind mount; isto garante que `next` e ferramentas existam na imagem base.
+FROM node:20-alpine
+
+WORKDIR /app
+
+RUN apk add --no-cache libc6-compat
+
+COPY package.json package-lock.json* yarn.lock* ./
+
+RUN npm install --no-audit --no-fund
+
+EXPOSE 3000
+
+CMD ["npm", "run", "dev"]
