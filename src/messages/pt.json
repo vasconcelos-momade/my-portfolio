@@ -3,6 +3,7 @@
   "hero_greeting": "Olá, eu sou Momade Vasconcelos",
   "hero_title": "Desenvolvedor Full Stack",
   "hero_desc": "Construo sistemas ERP e SaaS reais em produção, focados em performance, escalabilidade e resultados de negócio.",
+  "hero_desc_strong": "Sistemas prontos para produção desenhados para escala e uso real.",
   "hero_cta_start": "Iniciar projeto",
   "hero_cta_cv": "Baixar CV",
   "about_title": "Sobre Mim",
@@ -10,9 +11,9 @@
   "nav_projects": "Projetos",
   "nav_about": "Sobre",
   "nav_contact": "Contato",
-  "workspace_kicker": "Workspace",
-  "workspace_title": "Engenharia orientada a resultados",
-  "workspace_desc": "Sistemas pensados para performance, escalabilidade e operação contínua.",
+  "workspace_kicker": "Projetos",
+  "workspace_title": "Sistemas reais desenhados para escala",
+  "workspace_desc": "Engenharia de software focada em produção e operação contínua.",
   "workspace_signals": {
     "uptime": "99.9% uptime em sistemas",
     "scalable": "Arquitetura escalável",
@@ -52,7 +53,7 @@
   "products_list": {
     "gastro_status": "Em produção ativa",
     "gastro_type": "ERP + POS para restaurantes e bares",
-    "gastro_cta": "Visitar o site",
+    "gastro_cta": "Live Demo",
     "gastro_features": {
       "realtime": "Pedidos em tempo real",
       "kds": "Cozinha (KDS)",
@@ -63,7 +64,7 @@
     },
     "pharm_status": "Em desenvolvimento ativo",
     "pharm_type": "ERP completo para farmácias",
-    "pharm_cta": "Ver detalhes",
+    "pharm_cta": "View Product",
     "pharm_features": {
       "pos": "Vendas (POS)",
       "meds": "Medicamentos",

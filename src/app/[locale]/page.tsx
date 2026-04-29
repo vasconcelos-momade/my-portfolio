@@ -15,19 +15,26 @@ export default function HomePage() {
   const [isDone, setIsDone] = useState(false);
 
   useEffect(() => {
+    // Inicia com o texto vazio para a animação
     setDisplayedGreeting("");
     setIsDone(false);
+    
     let i = 0;
-    const interval = setInterval(() => {
-      setDisplayedGreeting(fullGreeting.slice(0, i));
-      i++;
-      if (i > fullGreeting.length) {
-        clearInterval(interval);
-        setIsDone(true);
-      }
-    }, 40); // Fast speed
+    // Pequeno timeout para evitar flicker visual na troca de idioma
+    const startTimeout = setTimeout(() => {
+      const interval = setInterval(() => {
+        setDisplayedGreeting(fullGreeting.slice(0, i));
+        i++;
+        if (i > fullGreeting.length) {
+          clearInterval(interval);
+          setIsDone(true);
+        }
+      }, 30); // Velocidade ligeiramente mais rápida para fluidez
+      
+      return () => clearInterval(interval);
+    }, 50);
 
-    return () => clearInterval(interval);
+    return () => clearTimeout(startTimeout);
   }, [fullGreeting]);
 
   const workspaceSignals = [
@@ -197,7 +204,7 @@ export default function HomePage() {
               <div className="social-links">
                 <motion.a 
                   whileHover={{ scale: 1.1 }}
-                  href="https://linkedin.com/in/momadevasconcelos" 
+                  href="https://linkedin.com/in/momade-vasconcelos-aa982a374" 
                   target="_blank" 
                   className="social-icon" 
                   title="LinkedIn"
@@ -206,7 +213,7 @@ export default function HomePage() {
                 </motion.a>
                 <motion.a 
                   whileHover={{ scale: 1.1 }}
-                  href="https://github.com/momadevasconcelos" 
+                  href="https://github.com/vasconcelos-momade" 
                   target="_blank" 
                   className="social-icon" 
                   title="GitHub"
@@ -236,14 +243,14 @@ export default function HomePage() {
                 </motion.div>
                 
                 <h1 className="section-title" style={{ minHeight: "1.2em" }}>
-                  {displayedGreeting}
+                  {displayedGreeting || fullGreeting}
                   {!isDone && <span className="typewriter-cursor">|</span>}
                 </h1>
                 
                 <motion.p 
                   initial={{ opacity: 0, y: 10 }}
-                  animate={isDone ? { opacity: 1, y: 0 } : { opacity: 0 }}
-                  transition={{ duration: 0.5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
                   className="section-subtitle" 
                   style={{ fontSize: "1.25rem", fontWeight: 600, color: "var(--text)", marginBottom: "1rem" }}
                 >
@@ -252,8 +259,18 @@ export default function HomePage() {
                 
                 <motion.p 
                   initial={{ opacity: 0, y: 10 }}
-                  animate={isDone ? { opacity: 1, y: 0 } : { opacity: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="section-subtitle"
+                  style={{ color: "var(--primary)", fontWeight: 500 }}
+                >
+                  {t("hero_desc_strong")}
+                </motion.p>
+                
+                <motion.p 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.45 }}
                   className="section-subtitle"
                 >
                   {t("hero_desc")}
@@ -261,29 +278,45 @@ export default function HomePage() {
                 
                 <motion.div 
                   initial={{ opacity: 0, y: 10 }}
-                  animate={isDone ? { opacity: 1, y: 0 } : { opacity: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginTop: "2.5rem" }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  style={{ 
+                    display: "flex", 
+                    flexDirection: "row", 
+                    flexWrap: "nowrap", 
+                    gap: "0.75rem", 
+                    marginTop: "2.5rem" 
+                  }}
                 >
                   <motion.a 
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.98 }}
                     href="#contact" 
                     className="btn btn-primary" 
-                    style={{ padding: "1rem 2rem", fontSize: "1rem" }}
+                    style={{ 
+                      flex: 1, 
+                      padding: "0.85rem 1rem", 
+                      fontSize: "0.95rem",
+                      minWidth: "max-content"
+                    }}
                   >
                     <Rocket size={18} />
-                    Iniciar projeto
+                    {t("hero_cta_start")}
                   </motion.a>
                   <motion.a 
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.98 }}
                     href="/cv.pdf" 
                     className="btn btn-outline" 
-                    style={{ padding: "1rem 2rem", fontSize: "1rem" }}
+                    style={{ 
+                      flex: 1, 
+                      padding: "0.85rem 1rem", 
+                      fontSize: "0.95rem",
+                      minWidth: "max-content"
+                    }}
                   >
                     <FileText size={18} />
-                    Baixar CV
+                    {t("hero_cta_cv")}
                   </motion.a>
                 </motion.div>
               </div>
@@ -671,7 +704,7 @@ export default function HomePage() {
             </a>
             <a
               className="btn btn-outline"
-              href="https://linkedin.com/in/momadevasconcelos"
+              href="https://linkedin.com/in/momade-vasconcelos-aa982a374"
               target="_blank"
               rel="noreferrer"
             >
@@ -679,7 +712,7 @@ export default function HomePage() {
             </a>
             <a
               className="btn btn-outline"
-              href="https://github.com/momadevasconcelos"
+              href="https://github.com/vasconcelos-momade"
               target="_blank"
               rel="noreferrer"
             >
@@ -690,7 +723,7 @@ export default function HomePage() {
       </section>
 
       <motion.a
-        href="https://wa.me/SEU_NUMERO_AQUI"
+        href="https://wa.me/258878131994"
         target="_blank"
         rel="noreferrer"
         className="btn fab-founder"

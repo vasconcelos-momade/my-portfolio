@@ -40,8 +40,8 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body>
+    <html lang={locale} className="dark" style={{ colorScheme: 'dark' }}>
+      <body style={{ backgroundColor: '#0a0a0a' }}>
         <NextIntlClientProvider messages={messages}>
           <div className="site-bg" />
           <Navbar />

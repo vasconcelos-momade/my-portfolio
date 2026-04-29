@@ -3,6 +3,7 @@
   "hero_greeting": "Hi, I'm Momade Vasconcelos",
   "hero_title": "Full Stack Developer",
   "hero_desc": "I build real-world ERP and SaaS systems in production, focused on performance, scalability, and business results.",
+  "hero_desc_strong": "Production-ready systems designed for scalability and real-world use.",
   "hero_cta_start": "Start project",
   "hero_cta_cv": "Download CV",
   "about_title": "About Me",
@@ -10,9 +11,9 @@
   "nav_projects": "Projects",
   "nav_about": "About",
   "nav_contact": "Contact",
-  "workspace_kicker": "Workspace",
-  "workspace_title": "Result-oriented engineering",
-  "workspace_desc": "Systems designed for performance, scalability, and continuous operation.",
+  "workspace_kicker": "Projects",
+  "workspace_title": "Production-ready systems designed for scalability",
+  "workspace_desc": "Software engineering focused on production and continuous operation.",
   "workspace_signals": {
     "uptime": "99.9% system uptime",
     "scalable": "Scalable architecture",
@@ -52,7 +53,7 @@
   "products_list": {
     "gastro_status": "In active production",
     "gastro_type": "ERP + POS for restaurants and bars",
-    "gastro_cta": "Visit site",
+    "gastro_cta": "Live Demo",
     "gastro_features": {
       "realtime": "Real-time orders",
       "kds": "Kitchen (KDS)",
@@ -63,7 +64,7 @@
     },
     "pharm_status": "In active development",
     "pharm_type": "Complete ERP for pharmacies",
-    "pharm_cta": "See details",
+    "pharm_cta": "View Product",
     "pharm_features": {
       "pos": "Sales (POS)",
       "meds": "Medicines",

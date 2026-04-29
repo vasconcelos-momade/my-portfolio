@@ -98,8 +98,8 @@ ERP para gestão farmacêutica com POS e controlo de stock.
 ## 📬 Contacto
 
 - GitHub: https://github.com/vasconcelos-momade
-- LinkedIn: https://www.linkedin.com/in/momade-vasconcelos
-- WhatsApp: +258 878 131 994
+- LinkedIn: https://www.linkedin.com/in/momade-vasconcelos-aa982a374
+- WhatsApp: +258878131994
 - Produto: https://gastro.skalway.com
 
 ---

@@ -4,8 +4,8 @@ export default function Footer() {
   const t = useTranslations();
 
   return (
-    <footer className="container-nav" style={{ padding: "4rem 0 6rem" }}>
-      <div style={{ borderTop: "1px solid var(--border)", paddingTop: "2.5rem" }}>
+    <footer className="container-nav" style={{ padding: "4rem 0", marginBottom: "1.5rem" }}>
+      <div style={{ borderTop: "1px solid var(--border)", paddingTop: "2.5rem", paddingLeft: "1rem", paddingRight: "1rem" }}>
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "1.25rem" }}>
           <div>
             <p style={{ margin: 0, fontWeight: 800, letterSpacing: "-0.02em", fontSize: "1.1rem" }}>vasconcelos.dev</p>
