@@ -76,7 +76,7 @@ export default function Navbar() {
             style={{ fontWeight: 800, letterSpacing: "-0.04em", fontSize: "1.1rem", color: "var(--text)" }}
             onClick={closeMobileMenu}
           >
-            vasconcelos.dev
+            mvasconcelos.dev
           </Link>
 
           {/* Desktop Navigation */}

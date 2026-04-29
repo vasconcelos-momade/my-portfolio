@@ -8,7 +8,7 @@ export default function Footer() {
       <div style={{ borderTop: "1px solid var(--border)", paddingTop: "2.5rem", paddingLeft: "1rem", paddingRight: "1rem" }}>
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "1.25rem" }}>
           <div>
-            <p style={{ margin: 0, fontWeight: 800, letterSpacing: "-0.02em", fontSize: "1.1rem" }}>vasconcelos.dev</p>
+            <p style={{ margin: 0, fontWeight: 800, letterSpacing: "-0.02em", fontSize: "1.1rem" }}>mvasconcelos.dev</p>
             <p style={{ margin: "0.5rem 0 0", color: "var(--text-muted)", maxWidth: 360, lineHeight: 1.6, fontSize: "0.9375rem" }}>
               {t("footer_desc")}
             </p>
