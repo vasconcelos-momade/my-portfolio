@@ -80,7 +80,7 @@ Sistema completo de gestão operacional para restaurantes.
 ### Skalway Gastro
 Sistema SaaS de gestão para restauração em produção real.
 
-### Skalway Pharm
+### Skalway PhRx
 ERP para gestão farmacêutica com POS e controlo de stock.
 
 ---
